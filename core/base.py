@@ -22,12 +22,16 @@ class Base(object):
         self.clock = pygame.time.Clock()
         # manage user input
         self.input = Input()
+        
+        # no of seconds application has been running
+        self.time = 0
 
     def initialize(self): 
         pass
     # implement by extending class 
     def update(self): 
         pass
+        
     def run(self):
         ## startup ## 
         self.initialize()
@@ -37,6 +41,10 @@ class Base(object):
             self.input.update()
             if self.input.quit:
                 self.running = False
+            # seconds since iteration of run loop
+            self.deltaTime = self.clock.get_time() / 1000
+            # increment time application has been running
+            self.time += self.deltaTime
             ## update ## 
             self.update()
             ## render ## 
