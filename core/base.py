@@ -1,6 +1,7 @@
 import pygame
 import sys
 from core.input import Input
+from core.openGLUtils import OpenGLUtils
 class Base(object):
     def __init__(self, screenSize=[512, 512]):
         # initialize all pygame modules 
@@ -25,6 +26,8 @@ class Base(object):
         
         # no of seconds application has been running
         self.time = 0
+      
+        OpenGLUtils.printSystemInfo()
 
     def initialize(self): 
         pass

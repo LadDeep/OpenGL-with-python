@@ -36,7 +36,7 @@ class Object3D(object):
             descendants.append(node) 
             # children of this node must also be processed 
             nodesToProcess = node.children + nodesToProcess 
-            return descendants
+        return descendants
 
     # apply geometric transformations 
     def applyMatrix(self, matrix, localCoord=True): 

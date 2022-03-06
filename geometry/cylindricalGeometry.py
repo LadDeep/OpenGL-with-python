@@ -1,4 +1,3 @@
-import imp
 from geometry.parametricGeometry import ParametricGeometry 
 from geometry.polygonGeometry import PolygonGeometry
 from core.matrix import Matrix
